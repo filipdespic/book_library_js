@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library</title>
     <link rel="stylesheet" href="style.css">
+
+    
 </head>
 
 <body>
@@ -14,11 +16,48 @@
         <h1>Book Library</h1>
         <h3>Welcome to the best book base!</h3>
     </div>
-
-
-    </div>
+    
+    
+        <button class="btn btn-green btn-large" id="addBookBtn">Add book</button>
+        <div class="books-grid" id="booksGrid"></div>
+    
+    <div class="modal" id="addBookModal">
+        <form class="add-book-form" id="addBookForm">
+          <h3 class="big-title">Add new book</h3>
+          <input
+            class="input"
+            type="text"
+            id="title"
+            placeholder="Title"
+            required
+           />
+           <br> 
+          <p class="error-msg" id="errorMsg"></p>
+          <input
+            class="input"
+            type="text"
+            id="author"
+            placeholder="Author"
+            required
+          />
+          <br>
+          <input
+            class="input"
+            type="number"
+            id="pages"
+            placeholder="Pages"
+            required
+          />
+          <br>
+          <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input class="checkbox" type="checkbox" id="isRead" />
+          </div>
+          <button class="btn btn-green btn-medium" type="submit">Submit</button>
+        </form>
+      </div>
 </body>
 
-<script src="index.js"></script>
 
+<script src="index.js"></script>
 </html>
